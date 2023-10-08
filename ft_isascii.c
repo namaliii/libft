@@ -6,23 +6,23 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:24:52 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/06 18:03:22 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/08 15:26:15 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int ft_isascii(char *str)
+int	ft_isascii(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (!(str[i] >= 0 && str[i] <= 127))
-            return (0);
-        i++;
-    }
-    return (1);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 0 && str[i] <= 127))
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
 // int main(void)

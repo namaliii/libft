@@ -6,22 +6,24 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:59:39 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/07 22:07:17 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/08 15:29:21 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-void ft_memset(void *b, int c, size_t len)
-{
-    size_t i;
 
-    i = 0;
-    unsigned char *p = b;
-    while (i < len)
-    {
-        p[i] = (unsigned char)c;
-        i++;
-    }
+void	ft_memset(void *b, int c, size_t len)
+{
+	size_t			i;
+	unsigned char	*p;
+
+	i = 0;
+	*p = b;
+	while (i < len)
+	{
+		p[i] = (unsigned char)c;
+		i++;
+	}
 }
 
 // #include <stdio.h>
