@@ -6,11 +6,10 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:11:01 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/08 15:24:31 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:39:09 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_isalnum(char *str)
 {
 	int	i;
@@ -27,6 +26,7 @@ int	ft_isalnum(char *str)
 	return (1);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //      int p;

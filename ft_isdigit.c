@@ -6,11 +6,10 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:59:27 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/08 15:27:02 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:38:08 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_isdigit(char *str)
 {
 	int	i;
@@ -25,6 +24,7 @@ int	ft_isdigit(char *str)
 	return (1);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //      int p;

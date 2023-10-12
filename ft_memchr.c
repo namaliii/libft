@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 19:10:09 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:39:43 by anamieta         ###   ########.fr       */
+/*   Created: 2023/10/11 19:14:18 by anamieta          #+#    #+#             */
+/*   Updated: 2023/10/12 12:26:38 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*p;
-	size_t			i;
+	const unsigned char	*ss;
+	unsigned char		cc;
+	size_t				i;
 
-	*p = s;
+	cc = c;
+	ss = s;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = 0;
+		if (ss[i] == cc)
+			return ((void *)(ss + i));
 		i++;
 	}
+	return (0);
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
-// 	int i = 0;
-// 	char str[] = "Lolololo";
-// 	while (str[i] != '\0')
+// 	char str[] = "Merry Christmas, ho ho ho";
+// 	unsigned char find = 'o';
+// 	char *result = memchr(str, find, strlen(str));
+// 	if (result != NULL)
 // 	{
-// 		i++;
+// 		printf("%c found at the position %ld\n", find, result - str);
 // 	}
-// 	size_t n = 5;
-// 	printf("Original string %s\n", str);
-// 	ft_bzero(str, n);
-// 	i--;
-// 	printf("Modified string: ");
-// 	while (i >= 0)
+// 	else
 // 	{
-// 		printf("%c", str[i]);
-// 		i--;
+// 		printf("%c not found in the string.", find);
 // 	}
 // 	return 0;
 // }

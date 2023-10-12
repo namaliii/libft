@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 18:03:49 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:37:58 by anamieta         ###   ########.fr       */
+/*   Created: 2023/10/11 16:52:19 by anamieta          #+#    #+#             */
+/*   Updated: 2023/10/12 12:28:32 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	char		*dest;
+	const char	*source;
+	size_t		i;
+
+	dest = dst;
+	source = src;
+	i = 0;
+	if (src == NULL)
+		return (dst);
+	while (i < n)
+	{
+		dest[i] = source[i];
+		i++;
+	}
+	return (dst);
 }
 
 // #include <stdio.h>
 // int main(void)
 // {
-//     char c1 = 57;
-//     char c2 = '\n';
-//     int f1 = ft_isprint(c1);
-//     printf("%c, %d", c1, f1);
-//     int f2 = ft_isprint(c2);
-//     printf("%c, %d", c2, f2);
+//     char source[] = "Hello world";
+//     char dest[20];
+//     size_t n = 8;
+//     ft_memcpy(dest, source, n);
+//     printf("Copied string: %s", dest);
 //     return 0;
 // }

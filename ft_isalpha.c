@@ -6,11 +6,10 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:48:20 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/08 15:25:31 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:38:53 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_isalpha(char *str)
 {
 	int	i;
@@ -26,6 +25,7 @@ int	ft_isalpha(char *str)
 	return (1);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //     int r;

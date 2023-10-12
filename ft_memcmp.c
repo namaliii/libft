@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 15:59:39 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:31:22 by anamieta         ###   ########.fr       */
+/*   Created: 2023/10/11 19:46:07 by anamieta          #+#    #+#             */
+/*   Updated: 2023/10/12 12:27:04 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *b, int c, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+	size_t				i;
 
+	p1 = s1;
+	p2 = s2;
 	i = 0;
-	p = b;
-	while (i < len)
+	while (i < n)
 	{
-		p[i] = (unsigned char)c;
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
 	}
+	return (0);
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
-//     int i = 0;
-//     int c = 'O';
-//     char *b = malloc(sizeof(char) * 8);
-//     ft_memset(b, c, 8);
-//     while (i < 8)
-//     {
-//         printf("%c", (unsigned char)b[i]);
-//         i++;
-//     }
+// 	unsigned char s1[] = "Keep the change filthy animal";
+// 	unsigned char s2[] = "Keep the change fixthy animal";
+// 	size_t n = strlen((char *)s1);
+// 	int result = ft_memcmp(s1, s2, n);
+// 	printf("Result: %d", result);
+// 	return 0;
 // }

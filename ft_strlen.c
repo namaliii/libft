@@ -6,11 +6,10 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:37:36 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/08 15:30:14 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:33:44 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_strlen(char *str)
 {
 	int	length;
@@ -23,6 +22,7 @@ int	ft_strlen(char *str)
 	return (length);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //     char string[] = "Gdybym mial gitare";
