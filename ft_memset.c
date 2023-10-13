@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:59:39 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:31:22 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/13 13:20:11 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_memset(void *b, int c, size_t len)
 // int main(void)
 // {
 //     int i = 0;
-//     int c = 'O';
+//     int c = 'u';
 //     char *b = malloc(sizeof(char) * 8);
 //     ft_memset(b, c, 8);
 //     while (i < 8)

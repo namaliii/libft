@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:40:02 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/09 18:03:19 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/12 19:43:19 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	const char s[] = "+-2147483647";
+// 	const char s[] = "2147483647";
 // 	printf("%d\n", ft_atoi(s));
 // 	printf("%d\n", atoi(s));
 // 	return 0;

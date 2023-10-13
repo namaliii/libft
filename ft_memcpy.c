@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:52:19 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:28:32 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/13 12:14:14 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 // #include <stdio.h>
 // int main(void)
 // {
-//     char source[] = "Hello world";
+//     char source[] = "Hello";
 //     char dest[20];
 //     size_t n = 8;
 //     ft_memcpy(dest, source, n);
