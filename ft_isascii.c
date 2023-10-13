@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_isascii(char *str)
 {
 	int	i;
@@ -25,6 +24,7 @@ int	ft_isascii(char *str)
 	return (1);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //     char string[] = "Æ";
