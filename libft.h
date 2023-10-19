@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:31:59 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 20:33:04 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/19 19:57:04 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ int				ft_isalpha(char *str);
 int				ft_isalnum(char *str);
 void			ft_bzero(void *s, size_t n);
 int				ft_atoi(const char *str);
+char			*ft_strdup(const char *s1);
+void			*ft_calloc(size_t count, size_t size);
 #endif
