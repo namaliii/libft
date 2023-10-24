@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:34:56 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/19 19:32:16 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:19:18 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size)
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;

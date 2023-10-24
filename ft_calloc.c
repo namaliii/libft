@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 21:10:44 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/19 19:56:00 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:01:52 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	totalsize;
 	void	*ptr;
 
-	ptr = malloc(totalsize);
 	totalsize = count * size;
+	ptr = malloc(totalsize);
 	if (!ptr)
 		return (NULL);
 	ft_memset(ptr, 0, totalsize);

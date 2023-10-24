@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 21:35:15 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/19 19:45:25 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:52:29 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char	*ft_strdup(const char *s1)
 // 		printf("original: %s\n", original);
 // 		printf("copy: %s\n", dup);
 // 	}
+// 	free(dup);
 // 	else
 // 	{
 // 		printf("Memory allocation failed.");
