@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:26:54 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/24 19:54:52 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:47:48 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,24 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-#include <stdio.h>
-
-char	f(unsigned int x, char c)
-{
-	(void)x;
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
-}
-
-int main(void)
-{
-	const char *s = "It's a string";
-	char *result = ft_strmapi(s, &f);
-
-	    if (result != NULL) {
-        printf("Transformed string: %s\n", result);
-        free(result);
-    }
-    else {
-        printf("Memory allocation failed.\n");
-    }
-
-    return 0;
-}
+// #include <stdio.h>
+// char	f(unsigned int x, char c)
+// {
+// 	(void)x;
+// 	if (c >= 97 && c <= 122)
+// 		return (c - 32);
+// 	return (c);
+// }
+// int main(void)
+// {
+// 	const char *s = "Rapapara";
+// 	char *result = ft_strmapi(s, &f);
+// 	    if (result != NULL) {
+//         printf("Transformed string: %s\n", result);
+//         free(result);
+//     }
+//     else {
+//         printf("Memory allocation failed.\n");
+//     }
+//     return 0;
+// }
