@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:59:39 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/13 13:20:11 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 17:04:04 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_memset(void *b, int c, size_t len)
 	unsigned char	*p;
 
 	i = 0;
-	p = b;
+	p = (unsigned char *)b;
 	while (i < len)
 	{
 		p[i] = (unsigned char)c;

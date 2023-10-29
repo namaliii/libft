@@ -6,22 +6,14 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:48:20 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:38:53 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:53:04 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!((str[i] >= 65 && str[i] <= 90)
-				|| (str[i] >= 97 && str[i] <= 122)))
-			return (0);
-		i++;
-	}
+	if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
+		return (0);
 	return (1);
 }
 

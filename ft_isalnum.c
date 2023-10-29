@@ -6,23 +6,16 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:11:01 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:39:09 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:59:49 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!((str[i] >= 65 && str[i] <= 90)
-				|| (str[i] >= 97 && str[i] <= 122)
-				|| (str[i] >= 48 && str[i] <= 57)))
-			return (0);
-		i++;
-	}
+int	ft_isalnum(int c)
+{
+	if (!ft_isalpha(c) && !ft_isdigit(c))
+		return (0);
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:20:09 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/24 20:03:42 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:37:13 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ static char	*create_s(char *s, unsigned int n, int count_digits)
 	return (s);
 }
 
+// Allocates (with malloc(3)) and returns a string
+// representing the integer received as an argument.
+// Negative numbers must be handled.
 char	*ft_itoa(int n)
 {
 	char	*s;

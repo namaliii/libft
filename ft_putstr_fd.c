@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 18:03:49 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 16:53:56 by anamieta         ###   ########.fr       */
+/*   Created: 2023/10/25 19:57:34 by anamieta          #+#    #+#             */
+/*   Updated: 2023/10/25 20:16:54 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+#include <unistd.h>
+
+// Outputs the string ’s’ to the given file
+// descriptor.
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!(c >= 32 && c <= 126))
-		return (0);
-	return (1);
+	int	len;
+
+	if (s == NULL)
+		return ;
+	len = ft_strlen(s);
+	write(fd, s, len);
 }
 
-// #include <stdio.h>
 // int main(void)
 // {
-//     char c1 = 57;
-//     char c2 = '\n';
-//     int f1 = ft_isprint(c1);
-//     printf("%c, %d", c1, f1);
-//     int f2 = ft_isprint(c2);
-//     printf("%c, %d", c2, f2);
-//     return 0;
+// 	char *str = "Check";
+// 	ft_putstr_fd(str, 1);
+// 	return 0;
 // }

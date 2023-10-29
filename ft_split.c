@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:44:38 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/24 20:03:56 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:36:58 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,10 @@ int	parse_words(char **words, char *s, char delimiter, int word_index)
 	return (word_index);
 }
 
+// Allocates (with malloc(3)) and returns an array
+// of strings obtained by splitting ’s’ using the
+// character ’c’ as a delimiter. The array must end
+// with a NULL pointer.
 char	**ft_split(char const *s, char c)
 {
 	int		counter;

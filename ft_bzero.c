@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:10:09 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:39:43 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:25:26 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 	size_t			i;
 
-	*p = s;
+	p = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{

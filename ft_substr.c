@@ -6,32 +6,39 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:04:21 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/20 15:18:13 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 17:51:14 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+// Allocates (with malloc(3)) and returns a substring from the string ’s’.
+// The substring begins at index ’start’ and is of
+// maximum size ’len’.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*subs;
-	size_t	i;
+	char			*subs;
+	unsigned int	i;
+	unsigned int	size;
 
-	i = 0;
+	size = ft_strlen((char *)s);
 	if (s == NULL)
 		return (NULL);
+	if (start >= size)
+		return (ft_strdup(""));
+	if (start + len > size)
+		len = size - start;
 	subs = (char *)malloc(len + 1);
 	if (subs == NULL)
 		return (NULL);
-	if (i < start)
-		i++;
-	while (s[i] != '\0' && start + len > i)
+	i = 0;
+	while (s[start + i] != '\0' && i < len)
 	{
-		subs[i - start] = s[i];
+		subs[i] = s[start + i];
 		i++;
 	}
-	subs[i - start] = '\0';
+	subs[i] = '\0';
 	return (subs);
 }
 

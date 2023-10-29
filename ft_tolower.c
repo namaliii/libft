@@ -6,13 +6,13 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:43:32 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/10 13:48:38 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:19:40 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c >= 41 && c <= 132)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }

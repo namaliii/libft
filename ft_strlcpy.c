@@ -6,23 +6,24 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:34:56 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/20 15:19:18 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 19:22:18 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	while (dstsize > 0 && i < dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
+	if (dstsize > 0)
+		dst[i] = '\0';
 	while (src[i] != '\0')
 	{
 		i++;

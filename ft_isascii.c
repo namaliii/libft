@@ -6,21 +6,14 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:24:52 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/08 15:26:15 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:53:21 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char *str)
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!(str[i] >= 0 && str[i] <= 127))
-			return (0);
-		i++;
-	}
+	if (!(c >= 0 && c <= 127))
+		return (0);
 	return (1);
 }
 
