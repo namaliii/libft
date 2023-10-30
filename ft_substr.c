@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:04:21 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 17:51:14 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:54:25 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	unsigned int	size;
 
-	size = ft_strlen((char *)s);
+	size = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
 	if (start >= size)

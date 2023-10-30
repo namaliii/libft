@@ -6,30 +6,27 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:54:23 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/10 19:12:27 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:09:03 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+// The strrchr() function locates the last occurrence of c.
 char	*ft_strrchr(const char *s, int c)
 {
-	int	slen;
+	char	*ptr;
 
-	slen = 0;
-	while (s[slen] != '\0')
+	ptr = NULL;
+	while (*s != '\0')
 	{
-		slen++;
+		if ((unsigned char)*s == (unsigned char)c)
+			ptr = (char *)s;
+		s++;
 	}
-	if (c == '\0')
-	{
-		return ((char *)&s[slen]);
-	}
-	while (slen >= 0)
-	{
-		if (s[slen] == c)
-			return ((char *)&s[slen]);
-		slen--;
-	}
-	return (0);
+	if ((unsigned char)c == '\0' && *s == '\0')
+		return ((char *)s);
+	return (ptr);
 }
 
 // #include <stdio.h>

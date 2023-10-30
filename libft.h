@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:31:59 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 17:08:57 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:49:21 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char			*ft_strnstr(
 					size_t	len
 					);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-int				ft_strlen(char *str);
+int				ft_strlen(const char *str);
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
-void			ft_memset(void *b, int c, size_t len);
+void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t	n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);

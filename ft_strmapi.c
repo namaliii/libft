@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:26:54 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 16:37:30 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:53:05 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
-	str = (char *)ft_calloc(ft_strlen((char *)s) + 1, sizeof(char));
+	str = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	while (s[i] != '\0')

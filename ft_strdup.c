@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 21:35:15 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 17:25:41 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:51:48 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strdup(const char *s1)
 	size_t	length;
 	char	*s2;
 
-	if (s1 == NULL)
-		return (NULL);
-	length = ft_strlen((char *)s1);
+	length = ft_strlen(s1);
 	s2 = (char *)malloc(length + 1);
 	if (s2 == NULL)
 		return (NULL);

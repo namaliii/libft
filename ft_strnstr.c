@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:40:35 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 19:22:27 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:55:46 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	needle_len = 0;
 	i = 0;
-	j = 0;
 	while (needle[needle_len] != '\0')
 		needle_len++;
 	if (needle_len == 0)
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i + needle_len <= len)
 	{
+		j = 0;
 		while (j < needle_len && haystack[i + j] == needle[j])
 			j++;
 		if (j == needle_len)
@@ -39,13 +39,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	const char *haystack = "This is a sample string.";
+// 	const char *haystack = NULL;
 // 	const char *needle = "sample";
-// 	size_t len = 16;
+// 	size_t len = 3;
 // 	char *result = ft_strnstr(haystack, needle, len);
 // 	if (result != NULL)
 // 	{
-// 		printf("Substring found at position: %s\n", result - haystack);
+// 		printf("Substring found at position: %ld\n", result - haystack);
 // 	}
 // 	else
 // 	{

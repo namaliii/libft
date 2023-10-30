@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:32:53 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/13 13:14:38 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:59:31 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = dst;
 	s = src;
+	if (s == NULL && d == NULL)
+		return (dst);
 	if (s < d && d < s + len)
 	{
 		i = len;
-		while (i > 0)
-		{
-			d[i - 1] = s[i - 1];
-			i--;
-		}
+		while (i-- > 0)
+			d[i] = s[i];
 	}
 	else
 	{
@@ -76,4 +75,36 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 //     printf("Destination: %s\n", destination);
 
 //     return 0;
+// }
+// #include "libft.h"
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	unsigned char	*d;
+// 	unsigned char	*s;
+// 	size_t			i;
+
+// 	d = (unsigned char *)dst;
+// 	s = (unsigned char *)src;
+// 	if (dst == NULL && src == NULL)
+// 		return (dst);
+// 	if (s >= d || d >= s + len)
+// 	{
+// 		i = 0;
+// 		while (i < len)
+// 		{
+// 			d[i] = s[i];
+// 			i++;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		d += len - 1;
+// 		s += len - 1;
+// 		while (len > 0)
+// 		{
+// 			*d-- = *s--;
+// 			len--;
+// 		}
+// 	}
+// 	return (dst);
 // }

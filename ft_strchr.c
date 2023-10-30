@@ -6,26 +6,27 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:50:06 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/13 13:41:24 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:11:07 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+// The strchr() function locates the first occurrence of c (converted to a
+//      char) in the string pointed to by s.
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i++;
+		if ((unsigned char)*s == (unsigned char)c)
+			return ((char *)s);
+		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0' && *s == '\0')
 	{
-		return ((char *)&s[i]);
+		return ((char *)s);
 	}
-	return (0);
+	return (NULL);
 }
 
 // #include <stdio.h>

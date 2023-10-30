@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:34:56 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 19:22:18 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:48:45 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize > 0)
 		dst[i] = '\0';
 	while (src[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 

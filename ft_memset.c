@@ -6,13 +6,15 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:59:39 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 17:04:04 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:33:13 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *b, int c, size_t len)
+// The memset() function writes len bytes of value c (converted to an
+// unsigned char) to the string b.
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;
 	unsigned char	*p;
@@ -24,6 +26,7 @@ void	ft_memset(void *b, int c, size_t len)
 		p[i] = (unsigned char)c;
 		i++;
 	}
+	return (b);
 }
 
 // #include <stdio.h>

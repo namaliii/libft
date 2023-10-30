@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 13:54:46 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/29 16:36:43 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:53:43 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	if (s1 == NULL)
 		return (0);
-	end = ft_strlen((char *)s1);
+	end = ft_strlen(s1);
 	trimmed = 0;
 	if (s1 != 0 && set != 0)
 	{

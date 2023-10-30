@@ -6,19 +6,19 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:37:36 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 12:33:44 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 14:01:35 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+int	ft_strlen(const char *str)
 {
 	int	length;
 
 	length = 0;
 	while (str[length] != '\0')
-	{
 		length++;
-	}
 	return (length);
 }
 
