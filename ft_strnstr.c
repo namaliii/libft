@@ -6,22 +6,24 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:40:35 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/30 15:55:46 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:43:09 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
+// The strnstr() function locates the first occurrence of the
+// null-terminated string needle in the string haystack, where not more
+// than len characters are searched.
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	needle_len;
 	size_t	i;
 	size_t	j;
 
-	needle_len = 0;
+	needle_len = (size_t)ft_strlen(needle);
 	i = 0;
-	while (needle[needle_len] != '\0')
-		needle_len++;
 	if (needle_len == 0)
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i + needle_len <= len)
@@ -39,7 +41,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	const char *haystack = NULL;
+// 	const char *haystack = "This is a sample string.";
 // 	const char *needle = "sample";
 // 	size_t len = 3;
 // 	char *result = ft_strnstr(haystack, needle, len);

@@ -6,12 +6,15 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 21:35:15 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/30 15:51:48 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:42:20 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//  The strdup() function allocates sufficient memory for a copy of the
+//  string s1, does the copy, and returns a pointer to it.  The pointer may
+//  subsequently be used as an argument to the function free(3).
 char	*ft_strdup(const char *s1)
 {
 	size_t	length;

@@ -6,13 +6,14 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:28:14 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/30 14:02:58 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:11:38 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
+// Appending src string to dst
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;

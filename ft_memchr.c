@@ -6,12 +6,14 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:14:18 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/12 20:16:02 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:35:46 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// The memchr() function locates the first occurrence of c (converted to an
+//      unsigned char) in string s.
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*ss;
