@@ -26,3 +26,5 @@ fclean: clean
 	rm -rf ./libft.a
 
 re: fclean all
+
+bonus rule?
