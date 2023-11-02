@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:48:16 by anamieta          #+#    #+#             */
-/*   Updated: 2023/11/02 19:28:27 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/11/02 20:08:25 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
-	create_node = ft_lstnew((*f)(lst->content));
+	create_node = ft_lstnew_safe((*f)(lst->content));
 	if (create_node == NULL)
 		return (NULL);
 	new_head = create_node;
@@ -47,7 +47,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	lst = lst->next;
 	while (lst)
 	{
-		create_node = ft_lstnew((*f)(lst->content));
+		create_node = ft_lstnew_safe((*f)(lst->content));
 		if (create_node == NULL)
 		{
 			ft_lstclear(&new_head, del);
