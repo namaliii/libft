@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:58:29 by anamieta          #+#    #+#             */
-/*   Updated: 2023/11/02 18:12:02 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/11/02 19:47:12 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (!current)
 	{
-		current = new;
+		*lst = new;
 		return ;
 	}
 	while (current->next)

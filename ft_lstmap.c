@@ -6,19 +6,19 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:48:16 by anamieta          #+#    #+#             */
-/*   Updated: 2023/11/02 19:25:49 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/11/02 19:28:27 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew_safe(void *content)
+t_list	*ft_lstnew_safe(void *content)
 {
-	t_list *new_node;
+	t_list	*new_node;
 
 	new_node = (t_list *)malloc(sizeof(t_list));
 	if (new_node == NULL)
-	{	
+	{
 		free(content);
 		return (NULL);
 	}
@@ -39,23 +39,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
-	create_node = ft_lstnew((*f)(lst->content)); //creating first node of the new list
+	create_node = ft_lstnew((*f)(lst->content));
 	if (create_node == NULL)
 		return (NULL);
 	new_head = create_node;
 	current = new_head;
-	lst = lst->next;//moving the pointer of the list to the second node
+	lst = lst->next;
 	while (lst)
 	{
-		create_node = ft_lstnew((*f)(lst->content));//creating next node, taking if from content of the lst
+		create_node = ft_lstnew((*f)(lst->content));
 		if (create_node == NULL)
 		{
 			ft_lstclear(&new_head, del);
 			return (NULL);
 		}
-		current->next = create_node; //connecting nodes together
-		current = current->next; //moving current to the next node in the new list
-		lst = lst->next; //moving to the next node in the lst
+		current->next = create_node;
+		current = current->next;
+		lst = lst->next;
 	}
 	return (new_head);
 }

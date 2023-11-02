@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:52:46 by anamieta          #+#    #+#             */
-/*   Updated: 2023/11/02 19:05:31 by anamieta         ###   ########.fr       */
+/*   Updated: 2023/11/02 19:57:35 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,18 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
-	t_list *to_delete;
+	t_list	*to_delete;
 
 	current = *lst;
+	if (!(*lst))
+		return ;
 	while (current)
 	{
 		to_delete = current;
 		current = current->next;
 		ft_lstdelone(to_delete, del);
 	}
-	*lst = NULL; //check
+	*lst = NULL;
 }
 
 // void ft_delete(void * something)
@@ -66,6 +68,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // 		printf("%d\n", (int)curr->content);
 // 		curr = curr->next;
 // 	}
-// 	printf("After the lstclean function size equals: %d", count);
+// 	printf("AFTER THE LSTCLEAN FUNCTION:\nSize equals: %d", count);
 // 	return 0;
-// }        
+// }
