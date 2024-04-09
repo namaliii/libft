@@ -6,23 +6,25 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 19:57:34 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/25 20:16:54 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/04/05 17:18:32 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-// Outputs the string ’s’ to the given file
-// descriptor.
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
+	int	written;
 
 	if (s == NULL)
-		return ;
+		return (write(fd, "(null)", 6));
 	len = ft_strlen(s);
-	write(fd, s, len);
+	written = write(fd, s, len);
+	if (written == -1)
+		return (-1);
+	return (written);
 }
 
 // int main(void)

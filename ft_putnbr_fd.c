@@ -6,42 +6,37 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:17:41 by anamieta          #+#    #+#             */
-/*   Updated: 2023/10/30 17:16:07 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/04/05 17:18:50 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-// Outputs the integer ’n’ to the given file
-// descriptor.
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(long n, int fd)
 {
-	char	digit;
+	int		i;
+	int		written;
 
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
-	}
-	else if (n == 0)
-		ft_putchar_fd('0', fd);
 	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
-		return ;
+		written = ft_putchar_fd('-', fd);
+		if (written == -1)
+			return (-1);
+		i = ft_putnbr_fd(-n, fd);
+		return (i + 1);
 	}
-	digit = -1;
-	if (n != 0)
+	if (n > 9)
 	{
-		digit = n % 10 + '0';
-		n = n / 10;
-		if (n > 0)
-			ft_putnbr_fd(n, fd);
+		i = ft_putnbr_fd(n / 10, fd);
+		if (i == -1)
+			return (-1);
+		written = ft_putchar_fd(n % 10 + '0', fd);
+		if (written == -1)
+			return (-1);
+		return (i + written);
 	}
-	if (digit != -1)
-		ft_putchar_fd(digit, fd);
+	return (ft_putchar_fd('0' + n, fd));
 }
 
 // int main(void)
